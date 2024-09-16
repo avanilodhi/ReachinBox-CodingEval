@@ -1,4 +1,4 @@
-// OneBox.js
+// OneBox.tsx
 import { useEffect, useState } from "react";
 import SubView from "../components/SubView";
 import MainPage from "../components/MainPage";
@@ -15,27 +15,18 @@ function OneBox() {
   useEffect(() => {
     if (!token) {
       Navigate("/login");
-    }
-    if (token) {
+    } else {
       localStorage.setItem("token", `Bearer ${token}`);
     }
-  }, [token]);
+  }, [token, Navigate]);
 
-  const [selectedComponent, setSelectedComponent] = useState(null); 
+  // Define type for selectedComponent
+  const [selectedComponent, setSelectedComponent] = useState<string | null>(null); 
 
-  const handleMenuItemClick = (path: any) => {
+  // Specify path as a string
+  const handleMenuItemClick = (path: string) => {
     setSelectedComponent(path);
   };
-
-  if (selectedComponent === null) {
-    return (
-      <div className="h-screen w-screen dark:bg-black bg-white pl-14">
-        <SideBar onMenuItemClick={handleMenuItemClick} />
-        <TopBar />
-        <SubView />
-      </div>
-    );
-  }
 
   return (
     <div className="h-screen w-screen dark:bg-black bg-white pl-14">

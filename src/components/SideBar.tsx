@@ -44,7 +44,7 @@ function SideBar({ onMenuItemClick }: any) {
         </div>
       </div>
       <div className="text-white bg-green-500 p-2 rounded-full">
-        MK
+        AS
       </div>
     </div>
   );
