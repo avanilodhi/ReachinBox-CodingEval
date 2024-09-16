@@ -1,6 +1,6 @@
-# Coding-Eval-ReachinBox
+# ReachinBoxCoding-Evaluation
 
-**This is Assignment: Evalaution Coding** <br>
+**This is Assignment: Evaluation for Coding** <br>
 
 ### Introducing ReachInbox
 
